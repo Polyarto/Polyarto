@@ -423,6 +423,135 @@
     .wrap{ padding: 0 22px; }
   }
   :focus-visible{ outline: 2px solid var(--gold); outline-offset: 3px; }
+
+
+
+  /* ===== PRESTATIONS ===== */
+  .prestations{ background: var(--bg-alt); }
+  .presta-intro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+    align-items: start;
+  }
+  .presta-intro p{ color: var(--cream); font-size: 16px; margin: 0 0 16px; }
+  .presta-offers{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .presta-offer{
+    background: var(--bg-alt);
+    padding: 22px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: center;
+  }
+  .presta-offer h4{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--cream);
+    margin: 0 0 4px;
+  }
+  .presta-offer p{ color: var(--muted); font-size: 13px; margin: 0; }
+  .presta-price{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold);
+    white-space: nowrap;
+    text-align: right;
+  }
+  .presta-videos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .presta-video-wrap{
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #000;
+  }
+  .presta-video-wrap iframe{ width: 100%; aspect-ratio: 9/16; display: block; border: none; }
+  .presta-video-label{
+    font-size: 11px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    padding: 9px 12px; background: var(--bg-card);
+  }
+  .presta-cta{
+    display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+    padding: 36px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 4px;
+  }
+  .presta-cta-text{ flex: 1; min-width: 200px; }
+  .presta-cta-text h3{ font-family: 'Fraunces', serif; font-size: 20px; color: var(--cream); margin-bottom: 6px; }
+  .presta-cta-text p{ font-size: 14px; color: var(--muted); margin: 0; }
+  .btn-whatsapp{ background: #25D366; color: #fff; border-color: #25D366; }
+  .btn-whatsapp:hover{ background: #1fb958; transform: translateY(-2px); }
+
+  /* ===== NEWSLETTER ===== */
+  .newsletter{ background: var(--bg); }
+  .newsletter-inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .newsletter h2{ font-size: clamp(26px, 3.5vw, 38px); color: var(--cream); margin-bottom: 12px; }
+  .newsletter p{ color: var(--muted); font-size: 15px; margin: 0 0 10px; }
+  .email-form{ display: flex; flex-direction: column; gap: 12px; }
+  .email-form input[type="email"]{
+    width: 100%; padding: 14px 18px;
+    background: var(--bg-card); border: 1px solid var(--line);
+    color: var(--cream); font-family: 'Work Sans', sans-serif; font-size: 14px;
+    border-radius: var(--radius); outline: none;
+    transition: border-color 0.2s;
+  }
+  .email-form input[type="email"]:focus{ border-color: var(--gold); }
+  .email-form input[type="email"]::placeholder{ color: var(--muted); }
+  .email-form .email-note{ font-size: 12px; color: var(--muted); }
+  .email-benefits{ display: flex; flex-direction: column; gap: 14px; }
+  .email-benefit{ display: flex; align-items: flex-start; gap: 14px; }
+  .email-benefit .dot{ width: 5px; height: 5px; background: var(--gold); border-radius: 50%; margin-top: 9px; flex-shrink: 0; }
+  .email-benefit span{ color: var(--cream); font-size: 15px; }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials{ background: var(--bg-alt); }
+  .testi-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .testi-card{
+    background: var(--bg); border: 1px solid var(--line);
+    padding: 28px 24px; border-radius: 4px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .testi-stars{ color: var(--gold); font-size: 15px; letter-spacing: 2px; }
+  .testi-text{ color: var(--cream); font-size: 14.5px; line-height: 1.65; flex-grow: 1; font-style: italic; }
+  .testi-author{ color: var(--muted); font-size: 13px; font-weight: 600; }
+  .testi-cta{
+    text-align: center; padding: 24px;
+    border: 1px solid var(--line); border-radius: 4px;
+    background: var(--bg);
+  }
+  .testi-cta p{ color: var(--muted); font-size: 14px; margin: 0 0 14px; }
+
+  @media (max-width: 860px){
+    .presta-intro{ grid-template-columns: 1fr; }
+    .presta-videos{ grid-template-columns: 1fr 1fr; }
+    .newsletter-inner{ grid-template-columns: 1fr; }
+    .testi-grid{ grid-template-columns: 1fr; }
+    .presta-cta{ flex-direction: column; }
+  }
+
 </style>
 </head>
 <body>
@@ -430,7 +559,10 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Polyarto</a>
-  <a href="#soutenir" class="nav-cta">Soutenir le projet</a>
+  <div style="display:flex;gap:16px;align-items:center;"><a href="art.html" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;font-family:Work Sans,sans-serif;font-size:13px;font-weight:600;text-decoration:none;border:1px solid rgba(200,155,60,0.5);color:var(--gold);border-radius:2px;transition:border-color 0.2s,background 0.2s;" onmouseover="this.style.background='rgba(200,155,60,0.1)'" onmouseout="this.style.background='transparent'">✏ Dessin & Art</a><div style="display:flex;gap:12px;align-items:center;">
+    <a href="art.html" style="display:inline-flex;align-items:center;gap:7px;padding:9px 16px;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;text-decoration:none;border:1px solid rgba(200,155,60,0.45);color:var(--gold);border-radius:2px;transition:background 0.2s;">✏ Dessin &amp; Art</a>
+    <a href="#soutenir" class="nav-cta">Soutenir le projet</a>
+  </div></div>
 </nav>
 
 <!-- HERO -->
@@ -614,6 +746,149 @@
   </div>
 </section>
 
+
+<!-- PRESTATIONS -->
+<section class="prestations">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Prestations scéniques</span>
+      <h2>Je mets l'ambiance<br><em>à votre événement.</em></h2>
+      <p class="lede">Mariage, anniversaire, soirée privée, défilé de mode, showcase en club — je me déplace et crée une expérience musicale sur mesure pour votre public.</p>
+    </div>
+
+    <div class="presta-intro">
+      <div>
+        <p>Auteur, compositeur et interprète, je propose des prestations live adaptées à chaque occasion. Mon répertoire couvre l'Afro, le R&B et l'urbain, pour une ambiance chaleureuse et festive qui fait bouger les salles.</p>
+        <p>Je propose également un service unique : <strong style="color:var(--cream);">la chanson sur mesure</strong>. Auteur-interprète, je peux écrire et enregistrer une chanson personnalisée pour un mariage, un anniversaire, une déclaration — un cadeau inoubliable qui n'existera qu'une seule fois.</p>
+      </div>
+      <div class="presta-offers">
+        <div class="presta-offer">
+          <div>
+            <h4>Mariage</h4>
+            <p>Prestation live, set personnalisé selon vos goûts</p>
+          </div>
+          <div class="presta-price">À partir de 400 €</div>
+        </div>
+        <div class="presta-offer">
+          <div>
+            <h4>Événement privé / Anniversaire</h4>
+            <p>Animation musicale live, set adapté à l'ambiance</p>
+          </div>
+          <div class="presta-price">À partir de 200 €</div>
+        </div>
+        <div class="presta-offer">
+          <div>
+            <h4>Showcase / Club / Défilé</h4>
+            <p>Set scénique, ambiance garantie</p>
+          </div>
+          <div class="presta-price">À partir de 300 €</div>
+        </div>
+        <div class="presta-offer">
+          <div>
+            <h4>Chanson sur mesure</h4>
+            <p>Écriture, composition &amp; interprétation personnalisée</p>
+          </div>
+          <div class="presta-price">À partir de 500 €</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="presta-videos">
+      <div class="presta-video-wrap">
+        <iframe src="https://www.youtube.com/embed/UBcIteGLA2Y" allowfullscreen loading="lazy" title="Mariage John et Marielle"></iframe>
+        <div class="presta-video-label">Mariage — John &amp; Marielle</div>
+      </div>
+      <div class="presta-video-wrap">
+        <iframe src="https://www.youtube.com/embed/VhohE1xVyo4" allowfullscreen loading="lazy" title="Mariage Yanic et Lindsey"></iframe>
+        <div class="presta-video-label">Mariage — Yanic &amp; Lindsey</div>
+      </div>
+      <div class="presta-video-wrap">
+        <iframe src="https://www.youtube.com/embed/44FPnongsOo" allowfullscreen loading="lazy" title="Mariage Yannick et Emmanie"></iframe>
+        <div class="presta-video-label">Mariage — Yannick &amp; Emmanie</div>
+      </div>
+      <div class="presta-video-wrap">
+        <iframe src="https://www.youtube.com/embed/FW85sTVFEu4" allowfullscreen loading="lazy" title="Showcase So Night Club Charleroi"></iframe>
+        <div class="presta-video-label">Showcase — So Night Club, Charleroi</div>
+      </div>
+      <div class="presta-video-wrap">
+        <iframe src="https://www.youtube.com/embed/cwZFEm6PqL0" allowfullscreen loading="lazy" title="Showcase Vas-y Mollo"></iframe>
+        <div class="presta-video-label">Showcase — Vas-y Mollo</div>
+      </div>
+    </div>
+
+    <div class="presta-cta">
+      <div class="presta-cta-text">
+        <h3>Réservez votre date</h3>
+        <p>Décrivez-moi votre événement et je vous réponds dans les 30 min avec une proposition adaptée.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="https://wa.me/32466263759" class="btn btn-primary btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Réserver sur WhatsApp
+        </a>
+        <a href="mailto:zesty.polyartofficiel@gmail.com" class="btn btn-outline">Par email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Ce qu'ils en disent</span>
+      <h2>La parole<br>de mes clients.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« Polyarto a assuré notre mariage et c'était absolument magique. Il a su créer une ambiance incroyable et tout le monde est resté jusqu'à la fin. On recommande les yeux fermés ! »</p>
+        <div class="testi-author">John &amp; Marielle — Mariage 2024</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« Le portrait qu'il a réalisé de nous est une œuvre d'art. Le niveau de détail et la personnalisation du décor nous ont laissés sans voix. Un cadeau qui durera toute une vie. »</p>
+        <div class="testi-author">Client portrait — 2024</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« Showcase au top ! Il a mis le feu à la salle dès les premières secondes. Un artiste complet, professionnel et à l'écoute. On le rebookerait sans hésiter. »</p>
+        <div class="testi-author">So Night Club — Charleroi</div>
+      </div>
+    </div>
+    <div class="testi-cta">
+      <p>Vous avez bénéficié d'une prestation musicale ou d'un portrait ? Partagez votre expérience.</p>
+      <a href="https://wa.me/32466263759?text=Bonjour%20Polyarto%2C%20je%20voudrais%20laisser%20un%20avis%20!" class="btn btn-outline" target="_blank" rel="noopener">Laisser un avis sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="wrap">
+    <div class="newsletter-inner">
+      <div>
+        <span class="eyebrow">Restez informé</span>
+        <h2 style="margin-top:14px;">Ne ratez aucune<br><em style="color:var(--gold);">sortie ni événement.</em></h2>
+        <p>Soyez les premiers informés des nouvelles sorties musicales, des dates de show et des offres exclusives pour les abonnés.</p>
+        <div class="email-benefits">
+          <div class="email-benefit"><span class="dot"></span><span>Accès en avant-première aux nouvelles sorties</span></div>
+          <div class="email-benefit"><span class="dot"></span><span>Dates de show et événements en exclusivité</span></div>
+          <div class="email-benefit"><span class="dot"></span><span>Offres spéciales réservées aux abonnés</span></div>
+        </div>
+      </div>
+      <div>
+        <form class="email-form" action="https://formspree.io/f/xpwzgkbn" method="POST">
+          <input type="email" name="email" placeholder="Votre adresse email" required>
+          <input type="hidden" name="_subject" value="Nouvel abonné — Polyarto">
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">S'inscrire à la newsletter</button>
+          <p class="email-note">Aucun spam. Désabonnement possible à tout moment.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOLLOW -->
 <section class="follow">
   <div class="wrap">
@@ -638,6 +913,7 @@
     </div>
   </div>
 </section>
+
 
 <footer>
   <div class="wrap">
