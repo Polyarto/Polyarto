@@ -155,6 +155,17 @@
     .wrap{ padding:0 22px; }
   }
   :focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+
+  /* ===== TESTIMONIALS ===== */
+  .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:36px; }
+  .testi-card{ background:var(--bg); border:1px solid var(--line); padding:28px 24px; border-radius:4px; display:flex; flex-direction:column; gap:14px; }
+  .testi-stars{ color:var(--gold); font-size:15px; letter-spacing:2px; }
+  .testi-text{ color:var(--cream); font-size:14.5px; line-height:1.65; flex-grow:1; font-style:italic; }
+  .testi-author{ color:var(--muted); font-size:13px; font-weight:600; }
+  .testi-cta{ text-align:center; padding:24px; border:1px solid var(--line); border-radius:4px; background:var(--bg); }
+  .testi-cta p{ color:var(--muted); font-size:14px; margin:0 0 14px; }
+  @media(max-width:860px){ .testi-grid{ grid-template-columns:1fr; } }
+
 </style>
 </head>
 <body>
@@ -498,6 +509,39 @@
 </section>
 <hr class="rule">
 
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" style="background:var(--bg-alt);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Ce qu'ils en disent</span>
+      <h2>Ils ont commandé,<br><em>ils ont été touchés.</em></h2>
+      <p class="lede">Des portraits pour des anniversaires, des mariages, des cadeaux — voici ce que mes clients disent de leur expérience.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« J'ai commandé un portrait de mon père pour ses 70 ans. Quand il l'a découvert, il a eu les larmes aux yeux. Le décor personnalisé avec ses passions — c'était exactement lui. Un cadeau qu'on n'oublie pas. Merci Polyarto. »</p>
+        <div class="testi-author">Sophie L. — Portrait anniversaire, 2024</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« On voulait quelque chose d'unique pour notre mariage, pas un cadeau ordinaire. Polyarto a réalisé notre portrait de couple avec un décor qui nous représente vraiment. On l'a accroché dans le salon et tout le monde nous demande qui l'a fait ! »</p>
+        <div class="testi-author">Axel &amp; Camille — Portrait de couple, 2023</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« J'avais commandé une illustration numérique pour décorer mon salon. Le rendu est bluffant — les couleurs, le niveau de détail... J'ai l'impression d'avoir une vraie toile de galerie. Je recommande sans hésiter à tous ceux qui veulent quelque chose d'original. »</p>
+        <div class="testi-author">Myriam K. — Toile numérique déco, 2025</div>
+      </div>
+    </div>
+    <div class="testi-cta">
+      <p>Vous avez reçu un portrait ou une illustration ? Votre avis compte — et il aide d'autres personnes à franchir le pas.</p>
+      <a href="https://wa.me/32466263759?text=Bonjour%20Polyarto%2C%20je%20voudrais%20laisser%20un%20avis%20sur%20mon%20portrait%20!" class="btn btn-outline" target="_blank" rel="noopener">Laisser un avis sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+<hr class="rule">
 <!-- CTA -->
 <section id="devis">
   <div class="wrap">
