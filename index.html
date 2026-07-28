@@ -941,14 +941,33 @@
         </div>
       </div>
       <div>
-        <form class="email-form" action="https://fee9b9fb.sibforms.com/serve/MUIFAGgGEzSNzxR3gtChBU4WfArMR-xd66A3Ek0M2Md-HS40LBMnb_GkDWOZl7HqC5Uk_Te7zyCcjchPpTio0NS09X2pbjVO6Gdt05RV0eMFCeJXE4GvwFgGGF7chd2wp8PACiPM1zj8PZwp4B0ziqmaJOLZVMhryEIjUs3ZOJM5cDWHL1oDsyMspR_Hfk0LbuhcER1d9Duif-VUVA==" method="POST">
-          <input type="email" name="EMAIL" placeholder="Votre adresse email" required>
+        <form class="email-form" id="brevo-newsletter-form">
+          <input type="email" name="EMAIL" id="brevo-email" placeholder="Votre adresse email" required>
           <input type="text" name="email_address_check" value="" style="display:none;">
           <input type="hidden" name="locale" value="fr">
           <input type="hidden" name="html_type" value="simple">
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">S'inscrire à la newsletter</button>
           <p class="email-note">Aucun spam. Désabonnement possible à tout moment.</p>
         </form>
+        <div id="brevo-success" style="display:none;background:var(--bg-card);border:1px solid var(--gold);border-radius:4px;padding:20px;text-align:center;">
+          <p style="color:var(--gold);font-family:'Fraunces',serif;font-size:18px;margin:0 0 6px;">Merci pour votre inscription !</p>
+          <p style="color:var(--muted);font-size:14px;margin:0;">Vérifiez votre boîte mail pour confirmer votre abonnement.</p>
+        </div>
+        <script>
+          document.getElementById('brevo-newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var data = new FormData(form);
+            fetch('https://fee9b9fb.sibforms.com/serve/MUIFAGgGEzSNzxR3gtChBU4WfArMR-xd66A3Ek0M2Md-HS40LBMnb_GkDWOZl7HqC5Uk_Te7zyCcjchPpTio0NS09X2pbjVO6Gdt05RV0eMFCeJXE4GvwFgGGF7chd2wp8PACiPM1zj8PZwp4B0ziqmaJOLZVMhryEIjUs3ZOJM5cDWHL1oDsyMspR_Hfk0LbuhcER1d9Duif-VUVA==', {
+              method: 'POST',
+              body: data,
+              mode: 'no-cors'
+            }).then(function() {
+              form.style.display = 'none';
+              document.getElementById('brevo-success').style.display = 'block';
+            });
+          });
+        </script>
       </div>
     </div>
   </div>
