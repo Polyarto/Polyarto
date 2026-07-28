@@ -182,8 +182,7 @@
   .client-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
   .client-imgs.single { grid-template-columns: 1fr; max-width: 420px; }
   .client-img-wrap { position: relative; }
-  .client-img-wrap img { width: 100%; display: block; border-radius: 4px; border: 1px solid var(--line); object-fit: cover; aspect-ratio: 3/4; }
-  .client-imgs .client-img-wrap:first-child img { aspect-ratio: auto; }
+  .client-img-wrap img { width: 100%; display: block; border-radius: 4px; border: 1px solid var(--line); }
   .client-img-label { font-size: 11px; color: var(--muted); text-align: center; margin-top: 6px; letter-spacing: 0.05em; }
   .client-caption { font-size: 13px; color: var(--muted); font-style: italic; text-align: center; margin-top: 8px; }
   .client-videos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
@@ -276,6 +275,12 @@
         </div>
       </div>
       <p class="client-caption">Un cadeau unique, encadré sous verre — chaque détail du décor a été imaginé pour raconter leur histoire.</p>
+      <div class="client-videos single-video" style="margin-top:16px;">
+        <div class="client-video-wrap">
+          <iframe src="https://drive.google.com/file/d/1f7rm5X4y83hY8_W2JTOeCSA5rhFDSsr7/preview" allowfullscreen loading="lazy" title="Timelapse réalisation portrait couple Morpheo" style="width:100%;aspect-ratio:9/16;display:block;border:none;border-radius:4px;"></iframe>
+          <div class="client-img-label">🎬 Timelapse de réalisation</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -393,8 +398,8 @@
       </div>
       <div class="client-videos">
         <div class="client-video-wrap">
-          <iframe src="https://www.youtube.com/embed/QU8yZ3pwMCQ" allowfullscreen loading="lazy" title="Portrait Rosyta — timelapse réalisation" style="width:100%;aspect-ratio:9/16;display:block;border:none;border-radius:4px;"></iframe>
-          <div class="client-img-label">🎬 Réalisation en direct</div>
+          <iframe src="https://www.youtube.com/embed/G0VC5KcsY8A" allowfullscreen loading="lazy" title="Portrait Rosyta — réalisation en vidéo" style="width:100%;aspect-ratio:9/16;display:block;border:none;border-radius:4px;"></iframe>
+          <div class="client-img-label">🎬 Portrait en vidéo</div>
         </div>
         <div class="client-video-wrap">
           <iframe src="https://www.youtube.com/embed/TDKqWPGHZ5Y" allowfullscreen loading="lazy" title="Portrait Rosyta — résultat final" style="width:100%;aspect-ratio:9/16;display:block;border:none;border-radius:4px;"></iframe>
@@ -574,14 +579,8 @@
       <h2>Le processus, les réactions,<br>la réalité du travail.</h2>
     </div>
     <div class="videos-grid">
-      <div class="video-wrap">
-        <iframe src="https://drive.google.com/file/d/1f7rm5X4y83hY8_W2JTOeCSA5rhFDSsr7/preview" allowfullscreen loading="lazy" title="Timelapse dessin — Polyarto"></iframe>
-        <div class="video-label">Timelapse dessin</div>
-      </div>
-      <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/G0VC5KcsY8A" allowfullscreen loading="lazy" title="Portrait en vidéo — Polyarto"></iframe>
-        <div class="video-label">Portrait en vidéo</div>
-      </div>
+
+
       <div class="video-wrap">
         <iframe src="https://www.youtube.com/embed/YYZf8DKsK50" allowfullscreen loading="lazy" title="Réaction client — Polyarto"></iframe>
         <div class="video-label">Réaction client live</div>
@@ -627,6 +626,11 @@
       <p class="lede">Des portraits pour des anniversaires, des mariages, des cadeaux — voici ce que mes clients disent de leur expérience.</p>
     </div>
     <div class="testi-grid">
+      <div class="testi-card" style="border-color:var(--gold);">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« J'ai offert ce portrait en cadeau surprise à ma femme — et quand elle l'a découvert, elle était en larmes d'émerveillement. Des mois plus tard, on ne se lasse toujours pas de le contempler. C'est un vrai chef-d'œuvre. Polyarto est un génie : réactif, professionnel, et il livre lui-même le dessin. Ses portraits sont déjà très beaux sur le site, mais en vrai c'est encore plus beau. Impossible de regretter. Je recommande à tout le monde. »</p>
+        <div class="testi-author">Le couple Morpheo — Portrait de couple sur mesure, 2026</div>
+      </div>
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">« J'ai commandé un portrait de mon père pour ses 70 ans. Quand il l'a découvert, il a eu les larmes aux yeux. Le décor personnalisé avec ses passions — c'était exactement lui. Un cadeau qu'on n'oublie pas. Merci Polyarto. »</p>
@@ -636,6 +640,16 @@
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">« On voulait quelque chose d'unique pour notre mariage, pas un cadeau ordinaire. Polyarto a réalisé notre portrait de couple avec un décor qui nous représente vraiment. On l'a accroché dans le salon et tout le monde nous demande qui l'a fait ! »</p>
         <div class="testi-author">Axel &amp; Camille — Portrait de couple, 2023</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« Je voulais un souvenir unique de moi, quelque chose qui me représente vraiment. Polyarto a su capturer bien plus qu'un visage — il a capturé qui je suis. Quand j'ai vu le résultat, j'étais sans voix. L'encadrement est magnifique, et le décor personnalisé rend le portrait inoubliable. C'est le genre d'œuvre qu'on garde toute une vie. »</p>
+        <div class="testi-author">Rosyta — Portrait personnalisé, 2026</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">« Je cherchais un cadeau original et sincère pour offrir à quelqu'un de cher. Polyarto a transformé une simple photo en quelque chose d'extraordinaire. Le niveau de détail est incroyable — chaque trait est précis, vivant. Ce n'est pas juste un dessin, c'est une émotion encadrée. N'hésitez pas une seule seconde. »</p>
+        <div class="testi-author">Kim — Portrait encadré, 2025</div>
       </div>
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
