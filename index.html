@@ -1036,5 +1036,18 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.yt-thumb-wrap').forEach(function(el){
+  el.addEventListener('click',function(){
+    var id=el.dataset.id;
+    var iframe=document.createElement('iframe');
+    iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';
+    iframe.allowFullscreen=true;
+    iframe.allow='autoplay; fullscreen';
+    iframe.style.cssText='width:100%;aspect-ratio:9/16;display:block;border:none;border-radius:4px;';
+    el.replaceWith(iframe);
+  });
+});
+</script>
 </body>
 </html>
